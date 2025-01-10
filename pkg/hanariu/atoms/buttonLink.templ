@@ -84,6 +84,9 @@ func getButtonLink(props *ButtonLinkBosons) templ.Component {
 	props.makeButtonLinkAttrs()
 	props.addButtonLinkAttr("type", props.Type)
 	props.Tag = hanariu.GetTagDefault("Tag", props.Tag, ButtonBosons{})
+	if props.Disabled && props.Type == "button" {
+		props.addButtonLinkAttr("disabled", "")
+	}
 	classes := getButtonLinkClasses(props)
 	return hanariu.CreateComponent(props.Tag, classes, props.Attrs, false)
 }

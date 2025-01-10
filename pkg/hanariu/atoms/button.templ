@@ -125,7 +125,9 @@ func ButtonButton(props *ButtonBosons) templ.Component {
 	props.makeButtonAttrs()
 	props.addButtonAttr("type", props.Type)
 	props.addButtonAttr("aria-label", props.Title)
-
+	if props.Disabled && props.Type == "button" {
+		props.addButtonAttr("disabled", "")
+	}
 	props.Tag = hanariu.GetTagDefault("Tag", props.Tag, ButtonBosons{})
 	classes := getButtonClasses(props)
 	return hanariu.CreateComponent(props.Tag, classes, props.Attrs, false)
