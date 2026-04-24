@@ -1,0 +1,34 @@
+{
+  "editor.formatOnSave": true,
+  "[templ]": {
+    "editor.defaultFormatter": "a-h.templ"
+  },
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+  ],
+  "tailwindCSS.includeLanguages": {
+    "templ": "html",
+  },
+  "emmet.includeLanguages": {
+    "templ": "html"
+  },
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "files.exclude": {
+    // "**/node_modules": true,
+    "dist": true,
+    // "**/*_templ.go": true,
+    // "**/*_templ.txt": true
+  },
+  "tailwindCSS.experimental.classRegex": [
+    ["{([\\s\\S]*)}", ":\\s*['\"`]([^'\"`]*)['\"`]"]
+  ],
+  "editor.wordWrap": "on",
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": true,
+  "editor.indentSize": 2,
+}
