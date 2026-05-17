@@ -1,6 +1,6 @@
 package hanariu
 
-import "github.com/hanariu/hanariu/pkg/hanariu"
+import "github.com/Discorder20/raw-h/pkg/hanariu"
 
 type ToggleBosons struct {
 	Id      string `default:"toggle"`
@@ -10,38 +10,38 @@ type ToggleBosons struct {
 }
 
 var toggleStyles = hanariu.Boson{
-	"default":  "inline-flex flex-row-reverse flex-shrink-0 cursor-pointer gap-3 justify-end",
-	"checkbox": "sr-only peer",
-	"area":     "relative rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary-500 ring-offset-secondary-50 dark:ring-offset-secondary-900 focus:ring-offset-2",
-	"circle":   "absolute pointer-events-none inline-block rounded-full overflow-hidden shadow transform ring-0 transition ease-in-out duration-200 left-0",
+	"default":  "toggle-default",
+	"checkbox": "toggle-checkbox",
+	"area":     "toggle-area",
+	"circle":   "toggle-circle",
 }
 
 var toggleSizesStyles = hanariu.Boson{
-	"sm": "h-4 w-8 text-sm",
-	"md": "h-5 w-10 text-base",
-	"lg": "h-6 w-12 text-lg",
+	"sm": "toggle-sizes-sm",
+	"md": "toggle-sizes-md",
+	"lg": "toggle-sizes-lg",
 }
 
 var toggleSizesCircleStyles = hanariu.Boson{
-	"sm": "h-3 w-3",
-	"md": "h-4 w-4",
-	"lg": "h-5 w-5",
+	"sm": "toggle-sizescircle-sm",
+	"md": "toggle-sizescircle-md",
+	"lg": "toggle-sizescircle-lg",
 }
 
 var toggleToggledStyles = hanariu.Boson{
-	"area":   "bg-primary-600",
-	"circle": "bg-secondary-50 dark:bg-primary-200",
+	"area":   "toggle-toggled-area",
+	"circle": "toggle-toggled-circle",
 }
 
 var toggleNotToggledStyles = hanariu.Boson{
-	"area":   "bg-secondary-300 dark:bg-primary-900",
-	"circle": "translate-x-0 bg-secondary-50 dark:bg-primary-500",
+	"area":   "toggle-nottoggled-area",
+	"circle": "toggle-nottoggled-circle",
 }
 
 var toggleSizeToggledStyles = hanariu.Boson{
-	"sm": "translate-x-4",
-	"md": "translate-x-5",
-	"lg": "translate-x-6",
+	"sm": "toggle-sizetoggled-sm",
+	"md": "toggle-sizetoggled-md",
+	"lg": "toggle-sizetoggled-lg",
 }
 
 templ Toggle(props *ToggleBosons) {

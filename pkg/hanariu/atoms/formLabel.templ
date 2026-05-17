@@ -1,8 +1,6 @@
 package hanariu
 
-import (
-	"github.com/hanariu/hanariu/pkg/hanariu"
-)
+import "github.com/Discorder20/raw-h/pkg/hanariu"
 
 type FormLabelBosons struct {
 	Text     string
@@ -12,9 +10,9 @@ type FormLabelBosons struct {
 }
 
 var formLabelStyles = hanariu.Boson{
-	"default":  "block text-sm font-normal text-secondary-700 dark:text-primary-300",
-	"optional": "text-xs font-normal text-secondary-700 dark:text-primary-200",
-	"pointer":  "cursor-pointer",
+	"default":  "formlabel-default",
+	"optional": "formlabel-optional",
+	"pointer":  "formlabel-pointer",
 }
 
 templ FormLabel(props *FormLabelBosons) {

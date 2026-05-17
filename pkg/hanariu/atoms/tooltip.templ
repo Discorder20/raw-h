@@ -1,8 +1,6 @@
 package hanariu
 
-import (
-	"github.com/hanariu/hanariu/pkg/hanariu"
-)
+import "github.com/Discorder20/raw-h/pkg/hanariu"
 
 type TooltipBosons struct {
 	Color     string `default:"white"`
@@ -12,18 +10,18 @@ type TooltipBosons struct {
 }
 
 var tooltipColorStyles = hanariu.Boson{
-	"white":     "bg-white text-secondary-800 border-secondary-200/75 dark:bg-primary-900 dark:border-secondary-800/50 dark:text-primary-100",
-	"primary":   "bg-primary-600 text-white border-primary-600/75 dark:bg-primary-900 dark:border-primary-800/50",
-	"secondary": "bg-secondary-600 text-white border-secondary-600/75 dark:bg-secondary-900 dark:border-secondary-800/50",
-	"warning":   "bg-warning-600 text-white border-warning-600/75 dark:bg-warning-900 dark:border-warning-800/50",
-	"danger":    "bg-danger-600 text-white border-danger-600/75 dark:bg-danger-900 dark:border-danger-800/50",
-	"success":   "bg-success-600 text-white border-success-600/75 dark:bg-success-900 dark:border-success-800/50",
-	"info":      "bg-info-600 text-white border-info-600/75 dark:bg-info-900 dark:border-info-800/50",
+	"white":     "tooltip-color-white",
+	"primary":   "tooltip-color-primary",
+	"secondary": "tooltip-color-secondary",
+	"warning":   "tooltip-color-warning",
+	"danger":    "tooltip-color-danger",
+	"success":   "tooltip-color-success",
+	"info":      "tooltip-color-info",
 }
 
 templ Tooltip(props *TooltipBosons) {
 	@tooltipContent(props) {
-		<div class="border-0 px-1.5 py-1 z-30 text-sm">
+		<div class="tooltip-1189">
 			{ children... }
 		</div>
 		<div data-arrow="arrow" class={ "absolute h-2 w-2 rotate-45 " + tooltipColorStyles[hanariu.GetTagDefault("Color", props.Color, TooltipBosons{})] }></div>

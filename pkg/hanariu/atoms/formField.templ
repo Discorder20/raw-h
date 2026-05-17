@@ -1,8 +1,6 @@
 package hanariu
 
-import (
-	"github.com/hanariu/hanariu/pkg/hanariu"
-)
+import "github.com/Discorder20/raw-h/pkg/hanariu"
 
 type FormFieldBosons struct {
 	Template string `default:"vertical"`
@@ -10,15 +8,15 @@ type FormFieldBosons struct {
 }
 
 var formFieldStyles = hanariu.Boson{
-	"default": "flex",
+	"default": "formfield-default",
 }
 
 var formFieldTemplateStyles = hanariu.Boson{
-	"vertical":   "flex-col gap-1",
-	"horizontal": "gap-3 flex-row",
-	"radio":      "flex-row gap-3",
-	"toggle":     "flex-row gap-3",
-	"checkbox":   "flex-col gap-3",
+	"vertical":   "formfield-template-vertical",
+	"horizontal": "formfield-template-horizontal",
+	"radio":      "formfield-template-radio",
+	"toggle":     "formfield-template-toggle",
+	"checkbox":   "formfield-template-checkbox",
 }
 
 func FormField(props *FormFieldBosons) templ.Component {

@@ -1,8 +1,6 @@
 package hanariu
 
-import (
-	hanariu "github.com/hanariu/hanariu/pkg/hanariu"
-)
+import hanariu "github.com/Discorder20/raw-h/pkg/hanariu"
 
 type SpinnerBosons struct {
 	Size  string `default:"md"`
@@ -10,28 +8,28 @@ type SpinnerBosons struct {
 }
 
 var spinnerSizeStyles = hanariu.Boson{
-	"xs": "h-4 w-4 border-[2px]",
-	"sm": "h-6 w-6 border-[3px]",
-	"md": "h-8 w-8 border-[4px]",
-	"lg": "h-12 w-12 border-[5px]",
-	"xl": "h-16 w-16 border-[6px]",
+	"xs": "spinner-size-xs",
+	"sm": "spinner-size-sm",
+	"md": "spinner-size-md",
+	"lg": "spinner-size-lg",
+	"xl": "spinner-size-xl",
 }
 
 var spinnerColorStyles = hanariu.Boson{
-	"primary":   "border-primary-600 dark:border-primary-400",
-	"secondary": "border-secondary-600 dark:border-secondary-400",
-	"warning":   "border-warning-600 dark:border-warning-400",
-	"danger":    "border-danger-600 dark:border-danger-400",
-	"success":   "border-success-600 dark:border-success-400",
-	"info":      "border-info-600 dark:border-info-400",
+	"primary":   "spinner-color-primary",
+	"secondary": "spinner-color-secondary",
+	"warning":   "spinner-color-warning",
+	"danger":    "spinner-color-danger",
+	"success":   "spinner-color-success",
+	"info":      "spinner-color-info",
 }
 
 var spinnerStyles = hanariu.Boson{
-	"spinner": "animate-spin border-b-transparent dark:border-b-transparent rounded-[50%] inline-block box-border border-solid",
+	"spinner": "spinner-spinner",
 }
 
 templ Spinner(props *SpinnerBosons) {
-	<div class={ getSpinnerClasses(props.Size, props.Color) } class="w-12"></div>
+	<div class={ getSpinnerClasses(props.Size, props.Color) } class="spinner-1067"></div>
 }
 
 func getSpinnerClasses(size, color string) string {

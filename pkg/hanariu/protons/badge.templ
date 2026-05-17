@@ -1,9 +1,9 @@
 package hanariu
 
 import (
-	"strconv"
 	"fmt"
-	hanariu "github.com/hanariu/hanariu/pkg/hanariu"
+	hanariu "github.com/Discorder20/raw-h/pkg/hanariu"
+	"strconv"
 )
 
 type BadgeBosons struct {
@@ -15,60 +15,60 @@ type BadgeBosons struct {
 }
 
 var badgeStyles = hanariu.Boson{
-	"default": "rounded-full flex justify-center items-center",
-	"icon":    "text-secondary-100 fill-secondary-100",
-	"mark":    "w-auto text-secondary-100 font-medium uppercase leading-3",
-	"border":  "border-secondary-100 dark:border-primary-900/40",
+	"default": "badge-default",
+	"icon":    "badge-icon",
+	"mark":    "badge-mark",
+	"border":  "badge-border",
 }
 
 var badgeColorStyles = hanariu.Boson{
-	"current":   "bg-current",
-	"primary":   "bg-primary-600",
-	"secondary": "bg-secondary-600",
-	"warning":   "bg-warning-600",
-	"danger":    "bg-danger-600",
-	"success":   "bg-success-600",
-	"info":      "bg-info-600",
+	"current":   "badge-color-current",
+	"primary":   "badge-color-primary",
+	"secondary": "badge-color-secondary",
+	"warning":   "badge-color-warning",
+	"danger":    "badge-color-danger",
+	"success":   "badge-color-success",
+	"info":      "badge-color-info",
 }
 
 var badgeSizeStyles = hanariu.Boson{
-	"xs": "min-w-[14px] h-3.5 border",
-	"sm": "min-w-[16px] h-4 border",
-	"md": "min-w-[20px] h-5 border",
-	"lg": "min-w-[24px] h-6 border-2",
-	"xl": "min-w-[28px] h-7 border-2",
+	"xs": "badge-size-xs",
+	"sm": "badge-size-sm",
+	"md": "badge-size-md",
+	"lg": "badge-size-lg",
+	"xl": "badge-size-xl",
 }
 
 var badgeMarkSizeStyles = hanariu.Boson{
-	"xs": "text-[8px] px-1",
-	"sm": "text-[10px] px-1",
-	"md": "text-[11px] px-1",
-	"lg": "text-[12px] px-1",
-	"xl": "text-[14px] px-1",
+	"xs": "badge-marksize-xs",
+	"sm": "badge-marksize-sm",
+	"md": "badge-marksize-md",
+	"lg": "badge-marksize-lg",
+	"xl": "badge-marksize-xl",
 }
 
 var badgeIconSizeStyles = hanariu.Boson{
-	"xs": "w-2 h-2",
-	"sm": "w-2.5 h-2.5",
-	"md": "w-3 h-3",
-	"lg": "w-3.5 h-3.5",
-	"xl": "w-4 h-4",
+	"xs": "badge-iconsize-xs",
+	"sm": "badge-iconsize-sm",
+	"md": "badge-iconsize-md",
+	"lg": "badge-iconsize-lg",
+	"xl": "badge-iconsize-xl",
 }
 
 var badgeDotSizeStyles = hanariu.Boson{
-	"xs": "w-1 h-1",
-	"sm": "w-1.5 h-1.5",
-	"md": "w-2 h-2",
-	"lg": "w-2.5 h-2.5",
-	"xl": "w-3 h-3",
+	"xs": "badge-dotsize-xs",
+	"sm": "badge-dotsize-sm",
+	"md": "badge-dotsize-md",
+	"lg": "badge-dotsize-lg",
+	"xl": "badge-dotsize-xl",
 }
 
 var badgeStatusSizeStyles = hanariu.Boson{
-	"xs": "w-2 h-2 border",
-	"sm": "w-2.5 h-2.5 border",
-	"md": "w-3 h-3 border",
-	"lg": "w-3.5 h-3.5 border-2",
-	"xl": "w-4 h-4 border-2",
+	"xs": "badge-statussize-xs",
+	"sm": "badge-statussize-sm",
+	"md": "badge-statussize-md",
+	"lg": "badge-statussize-lg",
+	"xl": "badge-statussize-xl",
 }
 
 templ Badge(props *BadgeBosons) {

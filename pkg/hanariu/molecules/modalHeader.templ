@@ -1,25 +1,25 @@
 package hanariu
 
 import (
-	"github.com/hanariu/hanariu/pkg/hanariu"
-	icons "github.com/hanariu/hanariu/pkg/hanariu/icons"
-	protons "github.com/hanariu/hanariu/pkg/hanariu/protons"
+	"github.com/Discorder20/raw-h/pkg/hanariu"
+	icons "github.com/Discorder20/raw-h/pkg/hanariu/icons"
+	protons "github.com/Discorder20/raw-h/pkg/hanariu/protons"
 )
 
 var modalHeaderStyles = hanariu.Boson{
-	"default":    "relative w-full gap-4 px-6 pt-6",
-	"horizontal": "flex flex-row",
-	"vertical":   "flex flex-col",
-	"close":      "absolute top-6 right-6",
+	"default":    "modalheader-default",
+	"horizontal": "modalheader-horizontal",
+	"vertical":   "modalheader-vertical",
+	"close":      "modalheader-close",
 }
 
 var modalHeaderContentStyles = hanariu.Boson{
-	"content":       "flex w-full flex-col",
-	"contentCenter": "text-center",
-	"title":         "pr-8 text-lg font-semibold text-secondary-900 dark:text-primary-200/80",
-	"titleLeft":     "pr-8",
-	"titleCenter":   "px-8",
-	"msg":           "pt-1 text-sm font-normal text-secondary-900 dark:text-primary-200/60",
+	"content":       "modalheader-content-content",
+	"contentCenter": "modalheader-content-contentcenter",
+	"title":         "modalheader-content-title",
+	"titleLeft":     "modalheader-content-titleleft",
+	"titleCenter":   "modalheader-content-titlecenter",
+	"msg":           "modalheader-content-msg",
 }
 
 templ ModalHeader(orientation string) {
@@ -38,7 +38,7 @@ func getModalHeaderClasses(orientation string) string {
 
 templ ModalHeaderHero(center bool) {
 	if center {
-		<div class="flex justify-center">
+		<div class="modalheader-1214">
 			{ children... }
 		</div>
 	} else {
@@ -50,8 +50,8 @@ templ ModalHeaderHero(center bool) {
 
 templ ModalHeaderClose(title string) {
 	<div class={ modalHeaderStyles["close"] }>
-		<button class="inline-flex rounded bg-transparent text-secondary-700 hover:text-secondary-800 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2 ring-offset-secondary-50 dark:ring-offset-primary-900/40 dark:text-primary-300 dark:hover:text-primary-100 dark:focus:ring-primary-800" data-x-bind="{['data-x-on:click']() { $store.overlay.close()}}" title={ title }>
-			<span class="sr-only">{ title }</span>
+		<button class="modalheader-1428" data-x-bind="{['data-x-on:click']() { $store.overlay.close()}}" title={ title }>
+			<span class="modalheader-1818">{ title }</span>
 			@protons.Icon(&protons.IconBosons{
 				Size:  "sm",
 				Color: "current",

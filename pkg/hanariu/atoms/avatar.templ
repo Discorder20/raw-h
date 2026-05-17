@@ -1,8 +1,8 @@
 package hanariu
 
 import (
+	"github.com/Discorder20/raw-h/pkg/hanariu"
 	"github.com/go-mods/initials"
-	"github.com/hanariu/hanariu/pkg/hanariu"
 )
 
 type AvatarBosons struct {
@@ -13,31 +13,31 @@ type AvatarBosons struct {
 }
 
 var avatarSizeStyles = hanariu.Boson{
-	"xs":   "h-8 w-8",
-	"sm":   "h-10 w-10",
-	"md":   "h-12 w-12",
-	"lg":   "h-16 w-16",
-	"xl":   "h-20 w-20",
-	"full": "h-full w-full",
+	"xs":   "avatar-size-xs",
+	"sm":   "avatar-size-sm",
+	"md":   "avatar-size-md",
+	"lg":   "avatar-size-lg",
+	"xl":   "avatar-size-xl",
+	"full": "avatar-size-full",
 }
 
 var avatarIinitialsStyles = hanariu.Boson{
-	"xs":   "text-[10px] font-medium",
-	"sm":   "text-sm font-medium",
-	"md":   "text-md font-medium",
-	"lg":   "text-xl font-medium",
-	"xl":   "text-2xl font-medium",
-	"full": "font-medium",
+	"xs":   "avatar-iinitials-xs",
+	"sm":   "avatar-iinitials-sm",
+	"md":   "avatar-iinitials-md",
+	"lg":   "avatar-iinitials-lg",
+	"xl":   "avatar-iinitials-xl",
+	"full": "avatar-iinitials-full",
 }
 
 var avatarShapeStyles = hanariu.Boson{
-	"square": "rounded-md",
-	"circle": "rounded-full-percent",
+	"square": "avatar-shape-square",
+	"circle": "avatar-shape-circle",
 }
 var avatarStyles = hanariu.Boson{
-	"main":     "inline-block",
-	"initials": "mt-0 text-primary-800/90 dark:text-primary-100",
-	"span":     "inline-flex items-center justify-center bg-primary-50 border border-primary-400 dark:bg-primary-900/40 dark:border-primary-400 dark:border-opacity-50 ",
+	"main":     "avatar-main",
+	"initials": "avatar-initials",
+	"span":     "avatar-span",
 }
 
 templ Avatar(props *AvatarBosons) {

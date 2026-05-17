@@ -1,8 +1,8 @@
 package hanariu
 
 import (
-	"github.com/hanariu/hanariu/pkg/hanariu"
-	atoms "github.com/hanariu/hanariu/pkg/hanariu/atoms"
+	"github.com/Discorder20/raw-h/pkg/hanariu"
+	atoms "github.com/Discorder20/raw-h/pkg/hanariu/atoms"
 )
 
 type TabsBosons struct {
@@ -15,21 +15,21 @@ type TabsBosons struct {
 }
 
 var tabsStyles = hanariu.Boson{
-	"select": "block w-full rounded-md border border-secondary-300 py-2 pl-3 pr-10 text-base focus:border-primary-600 focus:outline-none focus:ring-primary-500 sm:text-sm",
-	"tab":    "border-b border-gray-200 w-full",
-	"full":   "border-b border-gray-200",
+	"select": "tabs-select",
+	"tab":    "tabs-tab",
+	"full":   "tabs-full",
 }
 
 var tabsTypeStyle = hanariu.Boson{
-	"tab":  "-mb-px flex space-x-8",
-	"pill": "flex space-x-4",
-	"full": "-mb-px flex",
+	"tab":  "tabs-typestyle-tab",
+	"pill": "tabs-typestyle-pill",
+	"full": "tabs-typestyle-full",
 }
 
 templ Tabs(props *TabsBosons) {
-	<div data-x-data={ "{ activeTab: '" + props.Active + "' }" } class="w-full">
-		<div class="sm:hidden">
-			<label for={ props.Id } class="sr-only">Select a tab</label>
+	<div data-x-data={ "{ activeTab: '" + props.Active + "' }" } class="tabs-824">
+		<div class="tabs-848">
+			<label for={ props.Id } class="tabs-895">Select a tab</label>
 			<!-- Use an "onChange" listener to redirect the user to the selected tab URL. -->
 			<select id={ props.Id } name="tabs" class={ tabsStyles["select"] }>
 				for _, item := range props.Items {
@@ -37,7 +37,7 @@ templ Tabs(props *TabsBosons) {
 				}
 			</select>
 		</div>
-		<div class="hidden sm:block">
+		<div class="tabs-1256">
 			if props.Type == "pill" {
 				@getTabsNav(props, props.Type)
 			} else {

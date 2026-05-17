@@ -1,4 +1,4 @@
-module github.com/hanariu/hanariu
+module github.com/Discorder20/raw-h
 
 go 1.23.0
 

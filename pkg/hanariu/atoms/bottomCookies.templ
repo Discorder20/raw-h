@@ -1,14 +1,12 @@
 package hanariu
 
-import (
-	"github.com/hanariu/hanariu/pkg/hanariu"
-)
+import "github.com/Discorder20/raw-h/pkg/hanariu"
 
 var bottomCookiesStyles = hanariu.Boson{
-	"bottomCookies":  "relative w-auto h-auto",
-	"default":        "fixed bottom-0 z-40 w-full",
-	"content":        "absolute bottom-0 shadow-xl justify-items-center justify-center items-center w-full",
-	"slideContainer": "h-auto flex flex-col bg-white dark:bg-primary-900 shadow-xl w-full m-auto",
+	"bottomCookies":  "bottomcookies-bottomcookies",
+	"default":        "bottomcookies-default",
+	"content":        "bottomcookies-content",
+	"slideContainer": "bottomcookies-slidecontainer",
 }
 
 func bottomCookiesContent() templ.Component {

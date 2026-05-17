@@ -1,8 +1,6 @@
 package hanariu
 
-import (
-	"github.com/hanariu/hanariu/pkg/hanariu"
-)
+import "github.com/Discorder20/raw-h/pkg/hanariu"
 
 type DropdownBosons struct {
 	Id        string `default:"dropdown"`
@@ -12,10 +10,10 @@ type DropdownBosons struct {
 
 templ Dropdown(props *DropdownBosons) {
 	@dropdownContent(props) {
-		<div class="border-0 bg-white dark:bg-primary-900 rounded-md z-30">
+		<div class="dropdown-300">
 			{ children... }
 		</div>
-		<div data-arrow="arrow" class="absolute h-2 w-2 rotate-45 bg-white border-secondary-200/75 dark:bg-primary-900 dark:border-primary-950/40"></div>
+		<div data-arrow="arrow" class="dropdown-420"></div>
 	}
 }
 

@@ -1,8 +1,6 @@
 package hanariu
 
-import (
-	hanariu "github.com/hanariu/hanariu/pkg/hanariu"
-)
+import hanariu "github.com/Discorder20/raw-h/pkg/hanariu"
 
 type IconHeroBosons struct {
 	Size        string `default:"md"`
@@ -16,100 +14,100 @@ type IconHeroBosons struct {
 }
 
 var iconHeroStyles = hanariu.Boson{
-	"default":     "relative flex justify-center items-center",
-	"icon":        "h-2/3 w-2/3 block",
-	"iconOutline": "h-3/5 w-3/5 block",
-	"transparent": "bg-transparent",
+	"default":     "iconhero-default",
+	"icon":        "iconhero-icon",
+	"iconOutline": "iconhero-iconoutline",
+	"transparent": "iconhero-transparent",
 }
 
 var iconHeroColorStyles = hanariu.Boson{
-	"current":   "text-current/80",
-	"primary":   "text-primary-600/80 dark:text-primary-400",
-	"secondary": "text-secondary-600/80 dark:text-secondary-400",
-	"warning":   "text-warning-600/80 dark:text-warning-400",
-	"danger":    "text-danger-600/80 dark:text-danger-400",
-	"success":   "text-success-600/80 dark:text-success-400",
-	"info":      "text-info-600/80 dark:text-info-400",
+	"current":   "iconhero-color-current",
+	"primary":   "iconhero-color-primary",
+	"secondary": "iconhero-color-secondary",
+	"warning":   "iconhero-color-warning",
+	"danger":    "iconhero-color-danger",
+	"success":   "iconhero-color-success",
+	"info":      "iconhero-color-info",
 }
 
 var iconHeroColorBgStyles = hanariu.Boson{
-	"current":   "bg-current",
-	"primary":   "bg-primary-100 dark:bg-primary-600/80",
-	"secondary": "bg-secondary-100 dark:bg-secondary-600",
-	"warning":   "bg-warning-100 dark:bg-warning-600",
-	"danger":    "bg-danger-100 dark:bg-danger-600",
-	"success":   "bg-success-100 dark:bg-success-600",
-	"info":      "bg-info-100 dark:bg-info-600",
+	"current":   "iconhero-colorbg-current",
+	"primary":   "iconhero-colorbg-primary",
+	"secondary": "iconhero-colorbg-secondary",
+	"warning":   "iconhero-colorbg-warning",
+	"danger":    "iconhero-colorbg-danger",
+	"success":   "iconhero-colorbg-success",
+	"info":      "iconhero-colorbg-info",
 }
 
 var iconHeroColorBorderStyles = hanariu.Boson{
-	"current":   "outline-current",
-	"primary":   "outline-primary-50 dark:outline-primary-600/40",
-	"secondary": "outline-secondary-50 dark:outline-secondary-600/40",
-	"warning":   "outline-warning-50 dark:outline-warning-600/40",
-	"danger":    "outline-danger-50 dark:outline-danger-600/40",
-	"success":   "outline-success-50 dark:outline-success-600/40",
-	"info":      "outline-info-50 dark:outline-info-600/40",
+	"current":   "iconhero-colorborder-current",
+	"primary":   "iconhero-colorborder-primary",
+	"secondary": "iconhero-colorborder-secondary",
+	"warning":   "iconhero-colorborder-warning",
+	"danger":    "iconhero-colorborder-danger",
+	"success":   "iconhero-colorborder-success",
+	"info":      "iconhero-colorborder-info",
 }
 
 var iconHeroOutlineStyles = hanariu.Boson{
-	"current":   "text-current/80",
-	"primary":   "text-primary-600/80 dark:text-primary-300/80",
-	"secondary": "text-secondary-600/80 dark:text-secondary-300/80",
-	"warning":   "text-warning-600/80 dark:text-warning-300/80",
-	"danger":    "text-danger-600/80 dark:text-danger-300/80",
-	"success":   "text-success-600/80 dark:text-success-300/80",
-	"info":      "text-info-600/80 dark:text-info-300/80",
+	"current":   "iconhero-outline-current",
+	"primary":   "iconhero-outline-primary",
+	"secondary": "iconhero-outline-secondary",
+	"warning":   "iconhero-outline-warning",
+	"danger":    "iconhero-outline-danger",
+	"success":   "iconhero-outline-success",
+	"info":      "iconhero-outline-info",
 }
 
 var iconHeroOutlineBgStyles = hanariu.Boson{
-	"current":   "bg-current/20",
-	"primary":   "bg-primary-200/20 dark:bg-primary-600/80",
-	"secondary": "bg-secondary-200/20 dark:bg-secondary-600/80",
-	"warning":   "bg-warning-200/20 dark:bg-warning-600/80",
-	"danger":    "bg-danger-200/20 dark:bg-danger-600/80",
-	"success":   "bg-success-200/20 dark:bg-success-600/80",
-	"info":      "bg-info-200/20 dark:bg-info-600/80",
+	"current":   "iconhero-outlinebg-current",
+	"primary":   "iconhero-outlinebg-primary",
+	"secondary": "iconhero-outlinebg-secondary",
+	"warning":   "iconhero-outlinebg-warning",
+	"danger":    "iconhero-outlinebg-danger",
+	"success":   "iconhero-outlinebg-success",
+	"info":      "iconhero-outlinebg-info",
 }
 
 var iconHeroOutlineBorderStyles = hanariu.Boson{
-	"current":   "border-current/20",
-	"primary":   "border-primary-300/20 dark:border-primary-500/20",
-	"secondary": "border-secondary-300/20 dark:border-secondary-500/20",
-	"warning":   "border-warning-300/20 dark:border-warning-500/20",
-	"danger":    "border-danger-300/20 dark:border-danger-500/20",
-	"success":   "border-success-300/20 dark:border-success-500/20",
-	"info":      "border-info-300/20 dark:border-info-500/20",
+	"current":   "iconhero-outlineborder-current",
+	"primary":   "iconhero-outlineborder-primary",
+	"secondary": "iconhero-outlineborder-secondary",
+	"warning":   "iconhero-outlineborder-warning",
+	"danger":    "iconhero-outlineborder-danger",
+	"success":   "iconhero-outlineborder-success",
+	"info":      "iconhero-outlineborder-info",
 }
 
 var iconHeroBorderStyles = hanariu.Boson{
-	"xs":      "outline-[4px]",
-	"sm":      "outline-[6px]",
-	"md":      "outline-[8px]",
-	"lg":      "outline-[10px]",
-	"xl":      "outline-[12px]",
-	"outline": "outline",
-	"border":  "border",
-	"full":    "rounded-full",
-	"square":  "rounded-md",
+	"xs":      "iconhero-border-xs",
+	"sm":      "iconhero-border-sm",
+	"md":      "iconhero-border-md",
+	"lg":      "iconhero-border-lg",
+	"xl":      "iconhero-border-xl",
+	"outline": "iconhero-border-outline",
+	"border":  "iconhero-border-border",
+	"full":    "iconhero-border-full",
+	"square":  "iconhero-border-square",
 }
 
 var iconHeroSizeStyles = hanariu.Boson{
-	"full": "w-full h-full ",
-	"xs":   "w-6 h-6 m-1",
-	"sm":   "w-8 h-8 m-1",
-	"md":   "w-10 h-10 m-1",
-	"lg":   "w-12 h-12 m-2",
-	"xl":   "w-16 h-16 m-2",
+	"full": "iconhero-size-full",
+	"xs":   "iconhero-size-xs",
+	"sm":   "iconhero-size-sm",
+	"md":   "iconhero-size-md",
+	"lg":   "iconhero-size-lg",
+	"xl":   "iconhero-size-xl",
 }
 
 var iconHeroOutlineSizeStyles = hanariu.Boson{
-	"full": "w-full h-full ",
-	"xs":   "w-8 h-8",
-	"sm":   "w-10 h-10",
-	"md":   "w-12 h-12",
-	"lg":   "w-16 h-16",
-	"xl":   "w-20 h-20",
+	"full": "iconhero-outlinesize-full",
+	"xs":   "iconhero-outlinesize-xs",
+	"sm":   "iconhero-outlinesize-sm",
+	"md":   "iconhero-outlinesize-md",
+	"lg":   "iconhero-outlinesize-lg",
+	"xl":   "iconhero-outlinesize-xl",
 }
 
 templ IconHero(props *IconHeroBosons) {

@@ -1,6 +1,6 @@
 package hanariu
 
-import "github.com/hanariu/hanariu/pkg/hanariu"
+import "github.com/Discorder20/raw-h/pkg/hanariu"
 
 type OverlayBosons struct {
 	Clickable bool
@@ -9,10 +9,10 @@ type OverlayBosons struct {
 }
 
 var overlayStyles = hanariu.Boson{
-	"parent":   "inset-0",
-	"fixed":    "fixed",
-	"absolute": "absolute",
-	"children": "absolute inset-0 bg-secondary-200 dark:bg-primary-800 opacity-90 dark:opacity-90",
+	"parent":   "overlay-parent",
+	"fixed":    "overlay-fixed",
+	"absolute": "overlay-absolute",
+	"children": "overlay-children",
 }
 
 func overlayLayer(props *OverlayBosons) templ.Component {

@@ -1,6 +1,6 @@
 package hanariu
 
-import "github.com/hanariu/hanariu/pkg/hanariu"
+import "github.com/Discorder20/raw-h/pkg/hanariu"
 
 type FormValidBosons struct {
 	Info  string
@@ -8,8 +8,8 @@ type FormValidBosons struct {
 }
 
 var formValidStyles = hanariu.Boson{
-	"error": "text-xs text-danger-700/80 dark:text-danger-300/80",
-	"info":  "text-xs text-secondary-600 dark:text-primary-300",
+	"error": "formvalid-error",
+	"info":  "formvalid-info",
 }
 
 templ FormValid(props *FormValidBosons) {

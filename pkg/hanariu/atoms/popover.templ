@@ -1,8 +1,6 @@
 package hanariu
 
-import (
-	"github.com/hanariu/hanariu/pkg/hanariu"
-)
+import "github.com/Discorder20/raw-h/pkg/hanariu"
 
 type PopoverBosons struct {
 	Id        string `default:"popover"`
@@ -12,10 +10,10 @@ type PopoverBosons struct {
 
 templ Popover(props *PopoverBosons) {
 	@popoverContent(props) {
-		<div class="border-0 bg-white dark:bg-primary-900 rounded-md z-30">
+		<div class="popover-292">
 			{ children... }
 		</div>
-		<div data-arrow="arrow" class="absolute h-2 w-2 rotate-45 bg-white border-secondary-200/75 dark:bg-primary-900 dark:border-primary-950/40"></div>
+		<div data-arrow="arrow" class="popover-412"></div>
 	}
 }
 

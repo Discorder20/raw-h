@@ -1,8 +1,6 @@
 package hanariu
 
-import (
-	"github.com/hanariu/hanariu/pkg/hanariu"
-)
+import "github.com/Discorder20/raw-h/pkg/hanariu"
 
 type AccordionItemBosons struct {
 	Title    string `default:""`
@@ -12,10 +10,10 @@ type AccordionItemBosons struct {
 }
 
 var accordionItemeStyles = hanariu.Boson{
-	"item":   "pt-6 pb-4",
-	"button": "group mb-1 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-secondary-800 rounded-lg transition hover:text-primary-600 dark:text-primary-200 dark:hover:text-primary-50",
-	"svg":    "flex-shrink-0 size-5 text-secondary-600 group-hover:text-secondary-500 dark:text-primary-200 dark:group-hover:text-primary-50",
-	"div":    "relative max-h-0 w-full overflow-hidden transition-all duration-300 text-secondary-600 dark:text-primary-300",
+	"item":   "accordionitem-e-item",
+	"button": "accordionitem-e-button",
+	"svg":    "accordionitem-e-svg",
+	"div":    "accordionitem-e-div",
 }
 
 templ AccordionItem(props *AccordionItemBosons) {

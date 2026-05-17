@@ -1,21 +1,19 @@
 package hanariu
 
-import (
-	"github.com/hanariu/hanariu/pkg/hanariu"
-)
+import "github.com/Discorder20/raw-h/pkg/hanariu"
 
 type ActionPanelBosons struct {
 	Vertical bool
 }
 
 var actionPanelStyles = hanariu.Boson{
-	"container":  "bg-white dark:bg-primary-900 shadow sm:rounded-lg w-full",
-	"content":    "flex px-4 py-5 sm:p-6 gap-x-4 md:gap-x-20 gap-y-4",
-	"contentCol": "flex-1",
-	"horizontal": "sm:items-center flex-col sm:flex-row",
-	"vertical":   "flex-col",
-	"heading":    "text-lg font-medium leading-6 text-secondary-900 dark:text-primary-100",
-	"caption":    "mt-2 text-sm text-secondary-600 dark:text-primary-300",
+	"container":  "actionpanel-container",
+	"content":    "actionpanel-content",
+	"contentCol": "actionpanel-contentcol",
+	"horizontal": "actionpanel-horizontal",
+	"vertical":   "actionpanel-vertical",
+	"heading":    "actionpanel-heading",
+	"caption":    "actionpanel-caption",
 }
 
 templ ActionPanel(props *ActionPanelBosons) {

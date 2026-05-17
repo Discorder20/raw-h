@@ -9,7 +9,7 @@ templ Floating(props *FloatingBosons) {
 		case "popover":
 			<div
 				data-x-data="popover"
-				class="relative"
+				class="floating-241"
 				data-x-on:mouseover="hoverCardEnter()"
 				data-x-on:mouseleave="hoverCardLeave()"
 			>
@@ -18,14 +18,14 @@ templ Floating(props *FloatingBosons) {
 		case "tooltip":
 			<div
 				data-x-data="{ open: false }"
-				class="relative"
+				class="floating-453"
 				data-x-on:mouseover="open = true"
 				data-x-on:mouseleave="open = false"
 			>
 				{ children... }
 			</div>
 		default:
-			<div data-x-data="{ open: false }" class="relative z-10">
+			<div data-x-data="{ open: false }" class="floating-639">
 				{ children... }
 			</div>
 	}

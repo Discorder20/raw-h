@@ -1,23 +1,21 @@
 package hanariu
 
-import (
-	hanariu "github.com/hanariu/hanariu/pkg/hanariu"
-)
+import hanariu "github.com/Discorder20/raw-h/pkg/hanariu"
 
 type SeparatorBosons struct {
 	Size string `default:"md"`
 }
 
 var separatorStyles = hanariu.Boson{
-	"default": "border-t border-secondary-200 dark:border-primary-400/20",
+	"default": "separator-default",
 }
 
 var separatorSizeStyles = hanariu.Boson{
-	"xs": "my-1",
-	"sm": "my-2",
-	"md": "my-3",
-	"lg": "my-4",
-	"xl": "my-5",
+	"xs": "separator-size-xs",
+	"sm": "separator-size-sm",
+	"md": "separator-size-md",
+	"lg": "separator-size-lg",
+	"xl": "separator-size-xl",
 }
 
 templ Separator(props *SeparatorBosons) {

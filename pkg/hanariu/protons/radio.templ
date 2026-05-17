@@ -1,8 +1,6 @@
 package hanariu
 
-import (
-	"github.com/hanariu/hanariu/pkg/hanariu"
-)
+import "github.com/Discorder20/raw-h/pkg/hanariu"
 
 type RadioBosons struct {
 	Error bool
@@ -10,9 +8,9 @@ type RadioBosons struct {
 }
 
 var radioStyles = hanariu.Boson{
-	"default": "form-radio h-4 w-4 border border-solid cursor-pointer",
-	"noerror": "border-secondary-300 dark:border-primary-700 dark:bg-primary-900 dark:checked:bg-primary-600 text-primary-600 dark:text-primary-600 focus:ring-primary-600 dark:focus:ring-primary-600 ring-offset-secondary-50 dark:ring-offset-primary-900",
-	"error":   "text-primary-600 dark:text-primary-600 border-danger-600 dark:border-danger-500 dark:bg-primary-900 focus:border-danger-500 focus:ring-danger-500 ring-offset-secondary-50 dark:ring-offset-secondary-900 focus:checked:ring-primary-600 focus:checked:border-primary-600",
+	"default": "radio-default",
+	"noerror": "radio-noerror",
+	"error":   "radio-error",
 }
 
 func Radio(props *RadioBosons) templ.Component {

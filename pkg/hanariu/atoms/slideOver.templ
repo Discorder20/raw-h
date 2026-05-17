@@ -1,8 +1,8 @@
 package hanariu
 
 import (
-	"github.com/hanariu/hanariu/pkg/hanariu"
-	protons "github.com/hanariu/hanariu/pkg/hanariu/protons"
+	"github.com/Discorder20/raw-h/pkg/hanariu"
+	protons "github.com/Discorder20/raw-h/pkg/hanariu/protons"
 )
 
 type SlideOverBosons struct {
@@ -12,17 +12,17 @@ type SlideOverBosons struct {
 }
 
 var slideOverStyles = hanariu.Boson{
-	"slideOver":      "relative w-auto h-auto",
-	"default":        "fixed inset-0 overflow-hidden z-[99]",
-	"main":           "absolute inset-0 overflow-hidden",
-	"container":      "pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10",
-	"content":        "pointer-events-auto w-screen",
-	"slideContainer": "flex h-[100vh] flex-col bg-white dark:bg-primary-900 shadow-xl",
+	"slideOver":      "slideover-slideover",
+	"default":        "slideover-default",
+	"main":           "slideover-main",
+	"container":      "slideover-container",
+	"content":        "slideover-content",
+	"slideContainer": "slideover-slidecontainer",
 }
 var slideOverSizesStyles = hanariu.Boson{
-	"xs": "max-w-xs",
-	"sm": "max-w-sm",
-	"md": "max-w-md",
+	"xs": "slideover-sizes-xs",
+	"sm": "slideover-sizes-sm",
+	"md": "slideover-sizes-md",
 }
 
 func slideOverContent(props *SlideOverBosons) templ.Component {

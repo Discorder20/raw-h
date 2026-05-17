@@ -1,8 +1,8 @@
 package hanariu
 
 import (
-	"github.com/hanariu/hanariu/pkg/hanariu"
-	protons "github.com/hanariu/hanariu/pkg/hanariu/protons"
+	"github.com/Discorder20/raw-h/pkg/hanariu"
+	protons "github.com/Discorder20/raw-h/pkg/hanariu/protons"
 )
 
 type ButtonLinkBosons struct {
@@ -18,36 +18,36 @@ type ButtonLinkBosons struct {
 }
 
 var buttonLinkStyles = hanariu.Boson{
-	"default": "relative inline-flex items-center justify-center font-semibold rounded-sm",
-	"active":  "transition duration-150 ease-in-out text-opacity-95 hover:text-opacity-100",
-	"reverse": "flex-row-reverse",
-	"full":    "w-full",
+	"default": "buttonlink-default",
+	"active":  "buttonlink-active",
+	"reverse": "buttonlink-reverse",
+	"full":    "buttonlink-full",
 }
 
 var buttonLinkColorStyles = hanariu.Boson{
-	"primary":   "text-primary-700 hover:text-primary-800 dark:text-primary-200 dark:hover:text-primary-50",
-	"secondary": "text-secondary-700 hover:text-secondary-800 dark:text-secondary-200 dark:hover:text-secondary-50",
-	"warning":   "text-warning-700 hover:text-warning-800 dark:text-warning-200 dark:hover:text-warning-50",
-	"danger":    "text-danger-700 hover:text-danger-800 dark:text-danger-200 dark:hover:text-danger-50",
-	"success":   "text-success-700 hover:text-success-800 dark:text-success-200 dark:hover:text-success-50",
-	"info":      "text-info-700 hover:text-info-800 dark:text-info-200 dark:hover:text-info-50",
+	"primary":   "buttonlink-color-primary",
+	"secondary": "buttonlink-color-secondary",
+	"warning":   "buttonlink-color-warning",
+	"danger":    "buttonlink-color-danger",
+	"success":   "buttonlink-color-success",
+	"info":      "buttonlink-color-info",
 }
 
 var buttonLinkColorDisabledStyles = hanariu.Boson{
-	"primary":   "text-primary-700/50 dark:text-primary-500/50",
-	"secondary": "text-secondary-700/50 dark:text-secondary-500/50",
-	"warning":   "text-warning-700/50 dark:text-warning-500/50",
-	"danger":    "text-danger-700/50 dark:text-danger-500/50",
-	"success":   "text-success-700/50 dark:text-success-500/50",
-	"info":      "text-info-700/50 dark:text-infor-500/50",
+	"primary":   "buttonlink-colordisabled-primary",
+	"secondary": "buttonlink-colordisabled-secondary",
+	"warning":   "buttonlink-colordisabled-warning",
+	"danger":    "buttonlink-colordisabled-danger",
+	"success":   "buttonlink-colordisabled-success",
+	"info":      "buttonlink-colordisabled-info",
 }
 
 var buttonLinkSizeStyles = hanariu.Boson{
-	"xs": "text-xs",
-	"sm": "text-sm",
-	"md": "text-base",
-	"lg": "text-lg",
-	"xl": "text-xl",
+	"xs": "buttonlink-size-xs",
+	"sm": "buttonlink-size-sm",
+	"md": "buttonlink-size-md",
+	"lg": "buttonlink-size-lg",
+	"xl": "buttonlink-size-xl",
 }
 
 templ ButtonLink(props *ButtonLinkBosons) {

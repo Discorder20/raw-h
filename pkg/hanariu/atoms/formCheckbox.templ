@@ -1,8 +1,8 @@
 package hanariu
 
 import (
-	"github.com/hanariu/hanariu/pkg/hanariu"
-	protons "github.com/hanariu/hanariu/pkg/hanariu/protons"
+	"github.com/Discorder20/raw-h/pkg/hanariu"
+	protons "github.com/Discorder20/raw-h/pkg/hanariu/protons"
 )
 
 type FormCheckboxBosons struct {
@@ -12,7 +12,7 @@ type FormCheckboxBosons struct {
 }
 
 templ FormCheckbox(props *FormCheckboxBosons) {
-	<div class="flex items-top gap-3">
+	<div class="formcheckbox-284">
 		@protons.Checkbox(&protons.CheckboxBosons{Attrs: getFormCheckboxAttrs(props), Error: props.Error})
 		{ children... }
 	</div>
