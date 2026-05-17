@@ -19,7 +19,7 @@ var bottomCookiesStyles = hanariu.Boson{
 
 func bottomCookiesContent() templ.Component {
 	attrs := make(hanariu.Attrs)
-	var bind = "{['data-x-transition:enter']: 'transform transition ease-in-out duration-200 sm:duration-300',['data-x-transition:enter-start']: 'translate-y-full',['data-x-transition:enter-end']: 'translate-y-0',['data-x-transition:leave']: 'transform transition ease-in-out duration-200 sm:duration-300',['data-x-transition:leave-start']: 'translate-y-0',['data-x-transition:leave-end']: 'translate-y-full'"
+	var bind = "{['data-x-transition:enter']: 'bottomcookies-transition-enter',['data-x-transition:enter-start']: 'bottomcookies-transition-enter-from',['data-x-transition:enter-end']: 'bottomcookies-transition-enter-to',['data-x-transition:leave']: 'bottomcookies-transition-enter',['data-x-transition:leave-start']: 'bottomcookies-transition-enter-to',['data-x-transition:leave-end']: 'bottomcookies-transition-enter-from'"
 	bind += "}"
 	attrs["data-x-show"] = "$store.cookies.show === true"
 	attrs["data-x-bind"] = bind
