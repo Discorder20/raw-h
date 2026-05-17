@@ -58,9 +58,9 @@ func BottomCookies() templ.Component {
 			return templ_7745c5c3_Err
 		}
 		var templ_7745c5c3_Var3 string
-		templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs("{['data-x-bind:class']() { $store.cookies.show === true ? 'z-40' : '' }}")
+		templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs("{['data-x-bind:class']() { $store.cookies.show === true ? 'bottomcookies-z-index' : '' }}")
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `pkg/hanariu/atoms/bottomCookies.templ`, Line: 25, Col: 90}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `pkg/hanariu/atoms/bottomCookies.templ`, Line: 25, Col: 107}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 		if templ_7745c5c3_Err != nil {

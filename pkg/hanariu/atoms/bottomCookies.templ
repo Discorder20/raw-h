@@ -22,7 +22,7 @@ func bottomCookiesContent() templ.Component {
 templ BottomCookies() {
 	<div
 		data-x-data
-		data-x-bind={ "{['data-x-bind:class']() { $store.cookies.show === true ? 'z-40' : '' }}" }
+		data-x-bind={ "{['data-x-bind:class']() { $store.cookies.show === true ? 'bottomcookies-z-index' : '' }}" }
 		class={ bottomCookiesStyles["bottomCookies"] }
 	>
 		<template data-x-teleport="body">
