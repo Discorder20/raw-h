@@ -119,7 +119,7 @@ func tooltipContent(props *TooltipBosons) templ.Component {
 	attrs[anchor] = "$refs." + idProp
 	attrs["data-x-bind"] = bind
 
-	class := "absolute z-40 border rounded-md shadow-md w-max "
+	class := "tooltip-content "
 	class += tooltipColorStyles[hanariu.GetTagDefault("Color", props.Color, TooltipBosons{})]
 	return hanariu.CreateComponent("div", class, attrs, false)
 }
