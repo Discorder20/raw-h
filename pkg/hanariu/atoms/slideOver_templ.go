@@ -35,7 +35,7 @@ var slideOverSizesStyles = hanariu.Boson{
 
 func slideOverContent(props *SlideOverBosons) templ.Component {
 	attrs := make(hanariu.Attrs)
-	var bind = "{['data-x-transition:enter']: 'transform transition ease-in-out duration-200 sm:duration-300',['data-x-transition:enter-start']: 'translate-x-full',['data-x-transition:enter-end']: 'translate-x-0',['data-x-transition:leave']: 'transform transition ease-in-out duration-200 sm:duration-300',['data-x-transition:leave-start']: 'translate-x-0',['data-x-transition:leave-end']: 'translate-x-full'"
+	var bind = "{['data-x-transition:enter']: 'slideover-transition-enter',['data-x-transition:enter-start']: 'slideover-transition-enter-start',['data-x-transition:enter-end']: 'slideover-transition-enter-end',['data-x-transition:leave']: 'slideover-transition-leave',['data-x-transition:leave-start']: 'slideover-transition-enter-end',['data-x-transition:leave-end']: 'slideover-transition-enter-start'"
 	if !props.Blocked {
 		bind += ", ['data-x-on:click.outside']() { $store.overlay.close()}"
 	}
@@ -77,9 +77,9 @@ func SlideOver(props *SlideOverBosons) templ.Component {
 			return templ_7745c5c3_Err
 		}
 		var templ_7745c5c3_Var3 string
-		templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs("{['data-x-on:keydown.escape.window']() { $store.overlay.close() }, ['data-x-bind:class']() { $store.overlay.template === '" + hanariu.GetTagDefault("Id", props.Id, SlideOverBosons{}) + "' ? 'z-40' : '' }}")
+		templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs("{['data-x-on:keydown.escape.window']() { $store.overlay.close() }, ['data-x-bind:class']() { $store.overlay.template === '" + hanariu.GetTagDefault("Id", props.Id, SlideOverBosons{}) + "' ? 'slideover-z-index' : '' }}")
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `pkg/hanariu/atoms/slideOver.templ`, Line: 44, Col: 222}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `pkg/hanariu/atoms/slideOver.templ`, Line: 44, Col: 235}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 		if templ_7745c5c3_Err != nil {

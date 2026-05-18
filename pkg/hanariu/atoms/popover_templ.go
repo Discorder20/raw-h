@@ -86,7 +86,7 @@ func popoverContent(props *PopoverBosons) templ.Component {
 	attrs[anchor] = "$refs." + idProp
 	attrs["data-x-bind"] = bind
 
-	class := "absolute z-40 border rounded-md shadow-md w-max bg-white border-secondary-200/75 dark:bg-primary-900 dark:border-primary-950/40"
+	class := "popover-content"
 
 	return hanariu.CreateComponent("div", class, attrs, false)
 }

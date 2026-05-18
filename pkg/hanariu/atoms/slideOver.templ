@@ -27,7 +27,7 @@ var slideOverSizesStyles = hanariu.Boson{
 
 func slideOverContent(props *SlideOverBosons) templ.Component {
 	attrs := make(hanariu.Attrs)
-	var bind = "{['data-x-transition:enter']: 'transform transition ease-in-out duration-200 sm:duration-300',['data-x-transition:enter-start']: 'translate-x-full',['data-x-transition:enter-end']: 'translate-x-0',['data-x-transition:leave']: 'transform transition ease-in-out duration-200 sm:duration-300',['data-x-transition:leave-start']: 'translate-x-0',['data-x-transition:leave-end']: 'translate-x-full'"
+	var bind = "{['data-x-transition:enter']: 'slideover-transition-enter',['data-x-transition:enter-start']: 'slideover-transition-enter-start',['data-x-transition:enter-end']: 'slideover-transition-enter-end',['data-x-transition:leave']: 'slideover-transition-leave',['data-x-transition:leave-start']: 'slideover-transition-enter-end',['data-x-transition:leave-end']: 'slideover-transition-enter-start'"
 	if !props.Blocked {
 		bind += ", ['data-x-on:click.outside']() { $store.overlay.close()}"
 	}
@@ -41,7 +41,7 @@ func slideOverContent(props *SlideOverBosons) templ.Component {
 templ SlideOver(props *SlideOverBosons) {
 	<div
 		data-x-data
-		data-x-bind={ "{['data-x-on:keydown.escape.window']() { $store.overlay.close() }, ['data-x-bind:class']() { $store.overlay.template === '" + hanariu.GetTagDefault("Id", props.Id, SlideOverBosons{}) + "' ? 'z-40' : '' }}" }
+		data-x-bind={ "{['data-x-on:keydown.escape.window']() { $store.overlay.close() }, ['data-x-bind:class']() { $store.overlay.template === '" + hanariu.GetTagDefault("Id", props.Id, SlideOverBosons{}) + "' ? 'slideover-z-index' : '' }}" }
 		class={ slideOverStyles["slideOver"] }
 	>
 		<template data-x-teleport="body">
