@@ -38,7 +38,7 @@ func getModalHeaderClasses(orientation string) string {
 
 templ ModalHeaderHero(center bool) {
 	if center {
-		<div class="modalheader-1214">
+		<div class="modalheader-centered">
 			{ children... }
 		</div>
 	} else {
@@ -50,8 +50,8 @@ templ ModalHeaderHero(center bool) {
 
 templ ModalHeaderClose(title string) {
 	<div class={ modalHeaderStyles["close"] }>
-		<button class="modalheader-1428" data-x-bind="{['data-x-on:click']() { $store.overlay.close()}}" title={ title }>
-			<span class="modalheader-1818">{ title }</span>
+		<button class="modalheader-button" data-x-bind="{['data-x-on:click']() { $store.overlay.close()}}" title={ title }>
+			<span class="modalheader-title">{ title }</span>
 			@protons.Icon(&protons.IconBosons{
 				Size:  "sm",
 				Color: "current",
