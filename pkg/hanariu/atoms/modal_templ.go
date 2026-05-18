@@ -41,6 +41,7 @@ func modalContent(props *ModalBosons) templ.Component {
 		bind += "}"
 		attrs["data-x-show"] = "$store.overlay.template === '" + hanariu.GetTagDefault("Id", props.Id, ModalBosons{}) + "'"
 		attrs["data-x-bind"] = bind
+		attrs["data-x-data"] = "true"
 	}
 
 	return hanariu.CreateComponent("div", classes, attrs, false)
@@ -129,7 +130,7 @@ func Modal(props *ModalBosons) templ.Component {
 			var templ_7745c5c3_Var6 string
 			templ_7745c5c3_Var6, templ_7745c5c3_Err = templ.JoinStringErrs("{['data-x-on:keydown.escape.window']() { $store.overlay.close() }, ['data-x-bind:class']() { $store.overlay.template === '" + hanariu.GetTagDefault("Id", props.Id, ModalBosons{}) + "' ? 'modal-z-index' : '' }}")
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `pkg/hanariu/atoms/modal.templ`, Line: 51, Col: 228}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `pkg/hanariu/atoms/modal.templ`, Line: 52, Col: 228}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var6))
 			if templ_7745c5c3_Err != nil {
@@ -177,7 +178,7 @@ func Modal(props *ModalBosons) templ.Component {
 			var templ_7745c5c3_Var10 string
 			templ_7745c5c3_Var10, templ_7745c5c3_Err = templ.JoinStringErrs("$store.overlay.template === '" + hanariu.GetTagDefault("Id", props.Id, ModalBosons{}) + "'")
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `pkg/hanariu/atoms/modal.templ`, Line: 58, Col: 111}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `pkg/hanariu/atoms/modal.templ`, Line: 59, Col: 111}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var10))
 			if templ_7745c5c3_Err != nil {
@@ -216,7 +217,7 @@ func Modal(props *ModalBosons) templ.Component {
 			var templ_7745c5c3_Var13 string
 			templ_7745c5c3_Var13, templ_7745c5c3_Err = templ.JoinStringErrs("$store.overlay.template === '" + hanariu.GetTagDefault("Id", props.Id, ModalBosons{}) + "'")
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `pkg/hanariu/atoms/modal.templ`, Line: 61, Col: 151}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `pkg/hanariu/atoms/modal.templ`, Line: 62, Col: 151}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var13))
 			if templ_7745c5c3_Err != nil {

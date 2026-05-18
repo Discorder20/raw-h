@@ -33,6 +33,7 @@ func modalContent(props *ModalBosons) templ.Component {
 		bind += "}"
 		attrs["data-x-show"] = "$store.overlay.template === '" + hanariu.GetTagDefault("Id", props.Id, ModalBosons{}) + "'"
 		attrs["data-x-bind"] = bind
+		attrs["data-x-data"] = "true"
 	}
 
 	return hanariu.CreateComponent("div", classes, attrs, false)
