@@ -6,12 +6,12 @@ type AccordionBosons struct {
 
 templ Accordion(props *AccordionBosons) {
 	if props.Collapse {
-		<div class="accordion-143">
+		<div class="accordion">
 			{ children... }
 		</div>
 	} else {
 		<div
-			class="accordion-262"
+			class="accordion"
 			data-x-data="{selected: 1}"
 		>
 			{ children... }
