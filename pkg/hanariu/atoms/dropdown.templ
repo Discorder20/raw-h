@@ -10,10 +10,10 @@ type DropdownBosons struct {
 
 templ Dropdown(props *DropdownBosons) {
 	@dropdownContent(props) {
-		<div class="dropdown-300">
+		<div class="dropdown-container">
 			{ children... }
 		</div>
-		<div data-arrow="arrow" class="dropdown-420"></div>
+		<div data-arrow="arrow" class="dropdown-arrow"></div>
 	}
 }
 
