@@ -74,7 +74,7 @@ func Dropdown(props *DropdownBosons) templ.Component {
 func dropdownContent(props *DropdownBosons) templ.Component {
 	attrs := make(hanariu.Attrs)
 
-	var bind = "{['data-x-transition:enter']: 'transition transform-cpu ease-out duration-100',['data-x-transition:enter-start']: 'transition transform-cpu opacity-0 scale-95',['data-x-transition:enter-end']: 'transition transform-cpu opacity-100 scale-100',['data-x-transition:leave']: 'transition transform-cpu ease-in duration-75',['data-x-transition:leave-start']: 'transition transform-cpu opacity-100 scale-100',['data-x-transition:leave-end']: 'transition transform-cpu opacity-0 scale-95'"
+	var bind = "{['data-x-transition:enter']: 'dropdown-transition-enter',['data-x-transition:enter-start']: 'dropdown-transition-enter-start',['data-x-transition:enter-end']: 'dropdown-transition-enter-end',['data-x-transition:leave']: 'dropdown-transition-leave',['data-x-transition:leave-start']: 'dropdown-transition-enter-end',['data-x-transition:leave-end']: 'dropdown-transition-enter-start'"
 	bind += ", ['data-x-on:click.outside']() { open = false }"
 	bind += "}"
 	attrs["data-x-cloak"] = ""
