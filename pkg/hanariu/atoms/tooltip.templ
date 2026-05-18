@@ -21,7 +21,7 @@ var tooltipColorStyles = hanariu.Boson{
 
 templ Tooltip(props *TooltipBosons) {
 	@tooltipContent(props) {
-		<div class="tooltip-1189">
+		<div class="tooltip">
 			{ children... }
 		</div>
 		<div data-arrow="arrow" class={ "absolute h-2 w-2 rotate-45 " + tooltipColorStyles[hanariu.GetTagDefault("Color", props.Color, TooltipBosons{})] }></div>
