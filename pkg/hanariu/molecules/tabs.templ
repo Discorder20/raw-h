@@ -27,9 +27,9 @@ var tabsTypeStyle = hanariu.Boson{
 }
 
 templ Tabs(props *TabsBosons) {
-	<div data-x-data={ "{ activeTab: '" + props.Active + "' }" } class="tabs-824">
-		<div class="tabs-848">
-			<label for={ props.Id } class="tabs-895">Select a tab</label>
+	<div data-x-data={ "{ activeTab: '" + props.Active + "' }" } class="tabs-container">
+		<div class="tabs-internal-container">
+			<label for={ props.Id } class="tabs-label">Select a tab</label>
 			<!-- Use an "onChange" listener to redirect the user to the selected tab URL. -->
 			<select id={ props.Id } name="tabs" class={ tabsStyles["select"] }>
 				for _, item := range props.Items {
@@ -37,7 +37,7 @@ templ Tabs(props *TabsBosons) {
 				}
 			</select>
 		</div>
-		<div class="tabs-1256">
+		<div class="tabs-nav-container">
 			if props.Type == "pill" {
 				@getTabsNav(props, props.Type)
 			} else {
