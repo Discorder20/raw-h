@@ -35,7 +35,7 @@ func Floating(props *FloatingBosons) templ.Component {
 		ctx = templ.ClearChildren(ctx)
 		switch props.Type {
 		case "popover":
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div data-x-data=\"popover\" class=\"floating-241\" data-x-on:mouseover=\"hoverCardEnter()\" data-x-on:mouseleave=\"hoverCardLeave()\">")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div data-x-data=\"popover\" class=\"floating\" data-x-on:mouseover=\"hoverCardEnter()\" data-x-on:mouseleave=\"hoverCardLeave()\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -48,7 +48,7 @@ func Floating(props *FloatingBosons) templ.Component {
 				return templ_7745c5c3_Err
 			}
 		case "tooltip":
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 3, "<div data-x-data=\"{ open: false }\" class=\"floating-453\" data-x-on:mouseover=\"open = true\" data-x-on:mouseleave=\"open = false\">")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 3, "<div data-x-data=\"{ open: false }\" class=\"floating\" data-x-on:mouseover=\"open = true\" data-x-on:mouseleave=\"open = false\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -61,7 +61,7 @@ func Floating(props *FloatingBosons) templ.Component {
 				return templ_7745c5c3_Err
 			}
 		default:
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 5, "<div data-x-data=\"{ open: false }\" class=\"floating-639\">")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 5, "<div data-x-data=\"{ open: false }\" class=\"floating-z-index\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
