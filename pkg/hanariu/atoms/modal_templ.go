@@ -34,7 +34,7 @@ func modalContent(props *ModalBosons) templ.Component {
 	classes := getModalContentClasses(props.WidthAuto)
 	attrs := make(hanariu.Attrs)
 	if !props.Preview {
-		var bind = "{['data-x-transition:enter']: 'ease-out duration-300',['data-x-transition:enter-start']: 'opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95',['data-x-transition:enter-end']: 'opacity-100 translate-y-0 sm:scale-100',['data-x-transition:leave']: 'ease-in duration-200',['data-x-transition:leave-start']: 'opacity-100 translate-y-0 sm:scale-100',['data-x-transition:leave-end']: 'opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'"
+		var bind = "{['data-x-transition:enter']: 'modal-transition-enter',['data-x-transition:enter-start']: 'modal-transition-enter-start',['data-x-transition:enter-end']: 'modal-transition-enter-end',['data-x-transition:leave']: 'modal-transition-leave',['data-x-transition:leave-start']: 'modal-transition-enter-end',['data-x-transition:leave-end']: 'modal-transition-enter-start'"
 		if !props.Blocked {
 			bind += ", ['data-x-on:click.outside']() { $store.overlay.close()}"
 		}
@@ -127,9 +127,9 @@ func Modal(props *ModalBosons) templ.Component {
 				return templ_7745c5c3_Err
 			}
 			var templ_7745c5c3_Var6 string
-			templ_7745c5c3_Var6, templ_7745c5c3_Err = templ.JoinStringErrs("{['data-x-on:keydown.escape.window']() { $store.overlay.close() }, ['data-x-bind:class']() { $store.overlay.template === '" + hanariu.GetTagDefault("Id", props.Id, ModalBosons{}) + "' ? 'z-40' : '' }}")
+			templ_7745c5c3_Var6, templ_7745c5c3_Err = templ.JoinStringErrs("{['data-x-on:keydown.escape.window']() { $store.overlay.close() }, ['data-x-bind:class']() { $store.overlay.template === '" + hanariu.GetTagDefault("Id", props.Id, ModalBosons{}) + "' ? 'modal-z-index' : '' }}")
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `pkg/hanariu/atoms/modal.templ`, Line: 51, Col: 219}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `pkg/hanariu/atoms/modal.templ`, Line: 51, Col: 228}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var6))
 			if templ_7745c5c3_Err != nil {

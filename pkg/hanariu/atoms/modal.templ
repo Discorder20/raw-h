@@ -26,7 +26,7 @@ func modalContent(props *ModalBosons) templ.Component {
 	classes := getModalContentClasses(props.WidthAuto)
 	attrs := make(hanariu.Attrs)
 	if !props.Preview {
-		var bind = "{['data-x-transition:enter']: 'ease-out duration-300',['data-x-transition:enter-start']: 'opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95',['data-x-transition:enter-end']: 'opacity-100 translate-y-0 sm:scale-100',['data-x-transition:leave']: 'ease-in duration-200',['data-x-transition:leave-start']: 'opacity-100 translate-y-0 sm:scale-100',['data-x-transition:leave-end']: 'opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'"
+		var bind = "{['data-x-transition:enter']: 'modal-transition-enter',['data-x-transition:enter-start']: 'modal-transition-enter-start',['data-x-transition:enter-end']: 'modal-transition-enter-end',['data-x-transition:leave']: 'modal-transition-leave',['data-x-transition:leave-start']: 'modal-transition-enter-end',['data-x-transition:leave-end']: 'modal-transition-enter-start'"
 		if !props.Blocked {
 			bind += ", ['data-x-on:click.outside']() { $store.overlay.close()}"
 		}
@@ -48,7 +48,7 @@ templ Modal(props *ModalBosons) {
 	} else {
 		<div
 			data-x-data
-			data-x-bind={ "{['data-x-on:keydown.escape.window']() { $store.overlay.close() }, ['data-x-bind:class']() { $store.overlay.template === '" + hanariu.GetTagDefault("Id", props.Id, ModalBosons{}) + "' ? 'z-40' : '' }}" }
+			data-x-bind={ "{['data-x-on:keydown.escape.window']() { $store.overlay.close() }, ['data-x-bind:class']() { $store.overlay.template === '" + hanariu.GetTagDefault("Id", props.Id, ModalBosons{}) + "' ? 'modal-z-index' : '' }}" }
 			class={ modalStyles["modal"] }
 		>
 			<template data-x-teleport="body">
