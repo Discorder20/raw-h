@@ -12,7 +12,7 @@ type FormCheckboxBosons struct {
 }
 
 templ FormCheckbox(props *FormCheckboxBosons) {
-	<div class="formcheckbox-284">
+	<div class="formcheckbox">
 		@protons.Checkbox(&protons.CheckboxBosons{Attrs: getFormCheckboxAttrs(props), Error: props.Error})
 		{ children... }
 	</div>
