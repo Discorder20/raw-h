@@ -107,7 +107,7 @@ func Tooltip(props *TooltipBosons) templ.Component {
 func tooltipContent(props *TooltipBosons) templ.Component {
 	attrs := make(hanariu.Attrs)
 
-	var bind = "{['data-x-transition:enter']: 'transition transform-cpu ease-out duration-100',['data-x-transition:enter-start']: 'transition transform-cpu opacity-0 scale-95',['data-x-transition:enter-end']: 'transition transform-cpu opacity-100 scale-100',['data-x-transition:leave']: 'transition transform-cpu ease-in duration-75',['data-x-transition:leave-start']: 'transition transform-cpu opacity-100 scale-100',['data-x-transition:leave-end']: 'transition transform-cpu opacity-0 scale-95'"
+	var bind = "{['data-x-transition:enter']: 'tooltip-transition-enter',['data-x-transition:enter-start']: 'tooltip-transition-enter-start',['data-x-transition:enter-end']: 'tooltip-transition-enter-end',['data-x-transition:leave']: 'tooltip-transition-leave',['data-x-transition:leave-start']: 'tooltip-transition-enter-end',['data-x-transition:leave-end']: 'tooltip-transition-enter-start'"
 	bind += "}"
 	attrs["data-x-cloak"] = ""
 	attrs["data-x-show"] = "open"
